@@ -1,0 +1,76 @@
+.theMainContainer{
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.omoGalleryContainer{
+    width: 80%;
+    height: 15rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: #242a2c;
+    background: linear-gradient(357deg, rgba(36,42,44,1) 19%, #64583e 88%);
+}
+
+.imageWrapperHeader{
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-family: charmonman;
+    background-color:#64583e;
+    color: white;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+
+.imageWrapper{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    transform-style: preserve-3d;
+    animation: spin 30s linear infinite ;
+}
+
+@keyframes spin {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(-370deg);
+    }
+}
+
+.imageWrapper span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(370px);
+}
+
+.imageWrapper span img{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+
+.imageWrapper span img:hover{
+    cursor: pointer;
+    transform: translate(30px) scale(1.2);
+}

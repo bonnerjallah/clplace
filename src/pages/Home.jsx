@@ -25,10 +25,7 @@ const Home = () => {
                     <span className={homestyles.fastflicker }>LA</span>
                     <span>C</span>
                     <span className={homestyles.flicker}>E</span>
-
                 </h2>
-                {/* <p   className={homestyles.meets}>Where elegance meets experience</p> */}
-
                 <img src="/Images/house/House1.jpg" alt=""  className={homestyles.houseImage}  />
             </div>
 
@@ -56,19 +53,48 @@ const Home = () => {
                         Highlights 
                     </h2>
                 </div>
-                <div className={homestyles.gallery}>
-                    <NavLink to="/Gallery">
-                        <div className={homestyles.imgbox}><h3>Bed Room</h3></div>
-                    </NavLink>
-                    <NavLink to="/Gallery">
-                        <div className={homestyles.imgbox}><h3>Kitchen</h3></div>
-                    </NavLink>
-                    <NavLink to="/Gallery">
-                        <div className={homestyles.imgbox}><h3>Living Room</h3></div>
-                    </NavLink>
-                    <NavLink to="/Gallery">
-                        <div className={homestyles.imgbox}><h3>Bath Room</h3></div>
-                    </NavLink>
+                <div className={homestyles.galleryWrapper}>
+                    <div className={homestyles.abiose}>
+                        <div className={homestyles.gallerySubHeader}>
+                            <h3>The Ayo</h3>
+                        </div>
+                        <div className={homestyles.abiosePicWrapper}>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Bed Room</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Kitchen</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Living Room</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Bath Room</h3></div>
+                            </NavLink>
+                        </div>
+                    </div>
+
+                    <div className={homestyles.verticalLine}></div>
+
+                    <div className={homestyles.theOmo}>
+                        <div className={homestyles.gallerySubHeader}>
+                            <h3>The Modu</h3>
+                        </div>
+                        <div className={homestyles.abiosePicWrapper}>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Bed Room</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Kitchen</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Living Room</h3></div>
+                            </NavLink>
+                            <NavLink to="/Gallery">
+                                <div className={homestyles.imgbox}><h3>Bath Room</h3></div>
+                            </NavLink>
+                        </div>
+                    </div>
                 </div>
             </div>
 

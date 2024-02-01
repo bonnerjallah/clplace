@@ -44,19 +44,6 @@
     border-radius: 0 1rem 1rem 0;
 }
 
-.meets{
-    font-family: charmonman;
-    font-size: 3rem;
-    margin-top: -4rem;
-    animation: seen 2s ease-in-out normal forwards;
-}
-
-@keyframes seen {
-    0%{ opacity: 0;}
-    50%{opacity: 0;}
-    100%{opacity: 1;}    
-}
-
 .slidein {
     font-family: charmonman;
     font-size: 1rem;
@@ -248,31 +235,49 @@ animation: shine 2s forwards, blink 10s 1s infinite;
 
 .gallaryContainer{
     width: 80%;
-    height: 25rem;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     margin: 1rem auto;
+    padding-top: 1rem;
 }
 
 .galleryHeaderWrapper{
     display: flex;
     justify-content: center;
+    width: 100%;
     margin-bottom: 2rem;
-    background-color: white;
-    width: 109%;
 }
 
-.gallery{
+.galleryWrapper{
+    display: grid;
+    grid-template-columns: 50% 1fr 50%;
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.verticalLine{
+    height: 100%;
+    border: 1px solid #ad9551;
+}
+
+.abiose,
+.theOmo{
     display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
     align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
 }
 
-.gallery a{
-    width: 6.25rem;
+.abiosePicWrapper{
+    display: flex;
+    padding: 1rem;
+}
+
+.abiosePicWrapper a{
+    width: 4.25rem;
     height: 15.25rem;
     border-radius: 50px;
     background-image: url(../../public/Images/house/PHOTO-9.jpg);
@@ -282,27 +287,25 @@ animation: shine 2s forwards, blink 10s 1s infinite;
     transition: width 0.5s;
 }
 
-.gallery a:nth-child(2){
+.abiosePicWrapper a:nth-child(2){
     background-image: url(../../public//Images/house/PHOTO-10.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
-.gallery a:nth-child(3){
+.abiosePicWrapper a:nth-child(3){
     background-image: url(../../public//Images/house/PHOTO-2.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
-.gallery a:nth-child(4){
+.abiosePicWrapper a:nth-child(4){
     background-image: url(../../public//Images/house/PHOTO-1.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.gallery a h3{
+.abiosePicWrapper a h3{
     color:#5f512c;
     position: absolute;
     bottom: 0;
@@ -312,17 +315,27 @@ animation: shine 2s forwards, blink 10s 1s infinite;
     transition: bottom 0.5s, opacity 0.5s;
 }
 
-.gallery a:hover{
-    width: 18.75rem;
+.abiosePicWrapper a:hover{
+    width: 15.75rem;
     cursor: pointer;
     transform: rotate(0);
-    margin: 0 4rem;
+    margin: 0 1rem;
 }
 
-.gallery a:hover h3{
+.abiosePicWrapper a:hover h3{
     opacity: 1;
     bottom: 15.3rem;
     color:#292313;
+}
+
+.gallerySubHeader{
+    font-family: charmonman;
+    width: 99.5%;
+    background-color: #ad9551;
+    color: white;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
 }
 
 main, 

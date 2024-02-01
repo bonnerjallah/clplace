@@ -16,8 +16,8 @@ form{
 }
 
 form button{
-    height: 3rem;
-    width: 7rem;
+    height: 2rem;
+    width: 5rem;
     border: none;
     margin: auto;
     cursor: pointer;
@@ -38,9 +38,9 @@ h2{
     margin-top: .5rem;
 }
 form input{
-    margin: 2rem;
+    margin: 2rem .5rem;
     width: 20rem;
-    height: 3rem;
+    height: 2rem;
     padding: .5rem;
 }
 
@@ -51,4 +51,20 @@ textarea{
 fieldset{
     display: flex;
     flex-direction: column;
+}
+
+.checkboxWrapper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: -3rem;
+}
+
+.checkboxWrapper label{
+   display: flex;
+   align-items: center;
+}
+
+.checkboxWrapper input{
+     width: 1rem;
+     
 }

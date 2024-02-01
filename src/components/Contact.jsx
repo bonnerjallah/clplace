@@ -32,11 +32,22 @@ const Contact = () => {
                 <form ref={form} onSubmit={sendEmail}>
                     <h2>Contact Us</h2>
                     <fieldset>
-                        <label htmlFor="name"></label>
-                        <input type="text" name="user_name" id="name" placeholder="NAME*" required />
+                        <label htmlFor="name">Name:
+                            <input type="text" name="user_name" id="name" placeholder="Johndoe*" required />
+                        </label>
 
-                        <label htmlFor="email"></label>
-                        <input type="email" name="user_email" id="email" placeholder="EMAIL*" required />
+                        <label htmlFor="email">Email:
+                            <input type="email" name="user_email" id="email" placeholder="@email.com*" required />
+                        </label>
+
+                        <div className={contactformstyle.checkboxWrapper}>
+                            <label htmlFor="prospective">Prospective Guest:
+                                <input type="checkbox" name="prospectiveGuest" id="prospective" />
+                            </label>
+                            <label htmlFor="current">Current Guest:
+                                <input type="checkbox" name="currentGuest" id="current" />
+                            </label>
+                        </div>
 
                         <label htmlFor="clientmessage"></label>
                         <textarea name="message" id="clientmessage" cols="30" rows="10" placeholder="Tell us about what we can do to support you"></textarea>

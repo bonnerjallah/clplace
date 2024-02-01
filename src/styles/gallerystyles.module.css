@@ -1,320 +1,113 @@
-.header{
-    font-family: charmonman;
-    font-weight: bold;
-    color: #ad9551;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-.mainContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-}
-
-.mainWrapper {
-    width: 83%;
-    height: 37rem;
-    display: flex;
-    position: relative;
-    margin: auto;
-    border: 1px solid black;
-    
-}
-
-.imageWrapperOne{
-    height: 100%;
-}
-
-.imageOne{
-    width: 100%;
-    height: 105%;
-    border-radius: 1% 0 0 1%;
-    margin-top: -1rem;
-}
-
-.imageWrapperTwo,
-.imageWrapperThree,
-.imageWrapperFour{
-    height: 100%;
-}
-
-
-.imageTwo{
-    width: 100%;
-    height: 100%;
-}
-
-.imageThree{
-    width: 100%;
-    height: 100%;
-    border-radius: 0 5% 5% 0;
-}
-
-.imageFour{
-    width: 100%;
-    height: 100%;
-}
-
-.imageFive{
-    width: 100%;
-    height: 100%;
-    border-radius: 0 5% 5% 0;
-}
-
-.thecard{
-    position: absolute;
-    width: 25rem;
-    height: 30rem;
-    margin: 2rem;
-    top: 2rem;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    background-color: #ad9551;
-    cursor: pointer;
-    border-radius: 5%;
-}
-
-.thecard:hover{
-    transform: rotateY(180deg);
-}
-
-.front{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: #ad9551;
-    border-radius: 5%;
-}
-
-.theback{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: white;
-    transform: rotateY(180deg);
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 5%;
+.theMianContainer{
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
-    align-items: center;
+    margin-top: 2rem;
 }
 
-.theback p{
+.mainContainer{
+    width: 80%;
+    height: 15rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: rgb(22,25,25);
+    background: linear-gradient(357deg, rgba(22,25,25,1) 0%, rgba(235,191,96,1) 100%);
+}
+
+.header{
+    margin-bottom: 5rem;
     font-size: 2rem;
-}
-
-.flipCarderBackHeader{
-    color: black;
-    font-family: charmonman;
-    font-size: 1.5rem;
-    text-decoration: underline;
     text-align: center;
-}
-
-.secondCard{
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin: 2rem;
-    left: 27rem;
-    top: 1rem;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    background-color: #ad9551;
-    cursor: pointer;
-    border-radius: 5%;
-}
-
-.secondCard:hover{
-    transform: rotateY(180deg);
-}
-
-.imageTwofront{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: #ad9551;
-    border-radius: 5%;
-}
-
-.imagetwoeback{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
+    font-family: charmonman;
     background-color: #ad9551;
     color: white;
-    transform: rotateY(180deg);
-    border-radius: 5%;
-    padding: 0 2rem;
-    border: 1px solid black;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 10px;
+}
+
+.imageWrapper{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    transform-style: preserve-3d;
+    animation: spin 30s linear infinite ;
+}
+
+@keyframes spin {
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(-360deg);
+    }
+}
+
+.imageWrapper span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(370px);
+}
+
+.imageWrapper span img{
+    position: absolute;
+    width: 35%;
+    height: 80%;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.imageWrapper span img:hover{
+    cursor: pointer;
+    transform: translate(30px) scale(1.2);
+}
+
+details ul{
     display: flex;
     flex-direction: column;
+}
+
+details ul li{
+    color: black;
+    list-style: circle;
+    margin-left: 2rem;
+    margin: .5rem 1.5rem;
+    
+}
+
+.componentSelection{
+    display: flex;
+    height: 2rem;
     align-items: center;
-    row-gap: 1rem;
+    margin-left: 8rem;
+    column-gap: .5rem;
+    color: black;
+
 }
 
-.imagetwoeback ul,
-.theback ul,
-.imagethreeback ul,
-.imageFourBack ul,
-.imageFiveBack ul{
-    display: flex;
-    flex-direction: column;
-    row-gap: .5rem;
-}
-
-.imagetwoeback ul li,
-.theback ul li,
-.imagethreeback ul li,
-.imageFourBack ul li,
-.imageFiveBack ul li{
-    list-style: square;
-}
-
-.thirdCard{
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin: 2rem;
-    left: 45rem;
-    top: 1rem;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    background-color: #ad9551;
-    cursor: pointer;
-    border-radius: 5%;
-}
-
-.thirdCard:hover{
-    transform: rotateY(180deg);
-}
-
-.imageThreefront{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: #ad9551;
-}
-
-.imagethreeback{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: white;
-    background-color: #ad9551;
-    transform: rotateY(180deg);
-    padding: 0 2rem;
-    border-radius: 5% 0 0 5%;
+.verticalLineBrake{
+    height: 2rem;
+    color: black;
     border: 1px solid black;
-    bottom: 0rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 1rem;
 }
 
-.forthCard{
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin: 2rem;
-    left: 45rem;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    background-color: #ad9551;
-    cursor: pointer;
-    border-radius: 5%;
-    bottom: 0;
-    left: 27rem;
-}
 
-.forthCard:hover{
-    transform: rotateY(180deg);
-}
-
-.imageFourFront{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: #ad9551;
-    border-radius: 5%;
-}
-
-.imageFourBack{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-color: #ad9551;
-    color: white;
-    transform: rotateY(180deg);
-    border-radius: 5%;
-    padding: 0 2rem;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-}
-
-.fifthCard{
-    position: absolute;
-    width: 15rem;
-    height: 15rem;
-    margin: 2rem;
-    left: 45rem;
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
-    background-color: #ad9551;
-    cursor: pointer;
-    border-radius: 5%;
-    bottom: 0;
-}
-
-.fifthCard:hover{
-    transform: rotateY(180deg);
-}
-
-.imageFiveFront{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: #ad9551;
-}
-
-.imageFiveBack{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    color: white;
-    background-color: #ad9551;
-    transform: rotateY(180deg);
-    padding: 0 2rem;
-    border-radius: 5% 0 0 5%;
-    border: 1px solid black;
-    bottom: 0rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-}
 
 .discriptionContainer{
     border: 1px solid black;
-    width: 83%;
-    margin: 2rem auto 10rem auto;
+    width: 100%;
+    margin: 1rem auto 0 auto;
     display: flex;
     justify-content: space-between;
     padding-left: .5rem ;
@@ -323,6 +116,18 @@
 .disWrapper{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.disWrapper h2{
+    text-align: left;
+    margin-bottom: .5rem;
+    font-family: charmonman;
+    font-weight: bold;
+    background-color: #ad9551;
+    width: max-content;
+    padding: .5rem;
+    border-radius: 10px;
+    color: white;
 }
 
 .offerWrapper{
@@ -357,6 +162,7 @@
     display: flex;
     text-decoration: dotted;
     column-gap: .5rem;
+    margin-bottom: .5rem;
 }
 
 
