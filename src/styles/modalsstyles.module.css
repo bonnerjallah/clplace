@@ -35,6 +35,11 @@
     border: 1px solid black;
 }
 
+.closeModalBttn:hover{
+    background-color: red;
+    color: white;
+}
+
 .circleLeft{
     position: absolute;
     font-size: 3rem;

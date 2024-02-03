@@ -1,9 +1,10 @@
 import { useState } from "react"
 
-import omostyle from "../styles/omostyle.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCouch, faFan, faKitchenSet, faTv, faUtensils, faWifi, } from "@fortawesome/free-solid-svg-icons"
 import gallerystyles from "../styles/gallerystyles.module.css"
+import omostyle from "../styles/omostyle.module.css"
+
 
 import Pricing from './Pricing'
 
@@ -11,7 +12,6 @@ import OmoMasterBedRoomModal from "./OmoMasterBedRoomModal"
 import OmoBedRoomTwoModal from "./OmoBedRoomTwoModal"
 import OmoBathRoom from "./OmoBathRoom"
 import OmoDiningRoomModal from "./OmoDiningRoomModal"
-import KitchenModal from "./KitchenModal"
 import OmoKitchenModal from "./OmoKitchenModal"
 import OmoDenModal from "./OmoDenModal"
 import OmoHallViewModal from "./OmoHallViewModal"
@@ -85,50 +85,44 @@ const TheOmo = () => {
             {den && (<OmoDenModal closeOmoDen={setDen} />)}
             {hallView && (<OmoHallViewModal  closeOmoHallViewModal={setHallView}/>)}
 
-            <div className={gallerystyles.discriptionContainer}>
-                    <div className={gallerystyles.disWrapper}>
-                        <h2>The Modu</h2>
-                        <div className={gallerystyles.details}>
-                            <p>2 guests</p>
-                            <p>-2 bedrooms</p>
-                            <p>-2 beds</p>
-                            <p>-1 bath</p>
-                        </div>
-                        <div>
-                            <details style={{color: "#ad9551", cursor: "pointer"}}>
-                                <ul style={{color: "black"}}>
-                                    <li>Master Bedroom: Queen Bed</li>
-                                    <li>Bedroom #2: Two full size beds </li>
-                                    <li>Bathroom</li>
-                                    <li>Dining Room</li>
-                                    <li>Den</li>
-                                    <li>Full Kitchen</li>
-                                    <li>Hall view</li>
-                                </ul>
-                            </details>
-                        </div>
+            <div className={gallerystyles.discriptionContainer} >
+                <div className={gallerystyles.disWrapper}>
+                    <h2>The Modu</h2>
+                    <div>
+                        <details style={{color: "#ad9551", cursor: "pointer", fontSize: "1.3rem"}}>
+                            <ul style={{color: "black"}}>
+                                <li>Master Bedroom: Queen Bed</li>
+                                <li>Bedroom #2: Two full size beds </li>
+                                <li>Bathroom</li>
+                                <li>Dining Room</li>
+                                <li>Den</li>
+                                <li>Full Kitchen</li>
+                                <li>Hall view</li>
+                            </ul>
+                        </details>
+                    </div>
 
-                        <div className={gallerystyles.offerWrapper}>
-                            <p>What this place offers</p>
-                            <div className={gallerystyles.iconWrapper}>
-                                <div>
-                                    <p><span><FontAwesomeIcon icon={faWifi}  /></span> Wifi</p>
-                                    <p><span><FontAwesomeIcon icon={faTv} /></span> Flat Screen</p>
-                                    <p><span><FontAwesomeIcon icon={faKitchenSet} /></span> Cookware/Dishes</p>
-                                    <p><span><FontAwesomeIcon icon={faUtensils} /></span> Utensils</p>
-                                </div>
-                                <div>
-                                    <p><span><FontAwesomeIcon icon={faCouch} /></span> Furnished & Decorated</p>
-                                    <p><span><FontAwesomeIcon icon={faFan} /></span> Air conditioning</p>
-                                </div>
+                    <div className={gallerystyles.offerWrapper}>
+                        <p>What this place offers</p>
+                        <div className={gallerystyles.iconWrapper}>
+                            <div>
+                                <p><span><FontAwesomeIcon icon={faWifi}  /></span> Wifi</p>
+                                <p><span><FontAwesomeIcon icon={faTv} /></span> Flat Screen</p>
+                                <p><span><FontAwesomeIcon icon={faKitchenSet} /></span> Cookware/Dishes</p>
+                                <p><span><FontAwesomeIcon icon={faUtensils} /></span> Utensils</p>
+                            </div>
+                            <div>
+                                <p><span><FontAwesomeIcon icon={faCouch} /></span> Furnished & Decorated</p>
+                                <p><span><FontAwesomeIcon icon={faFan} /></span> Air conditioning</p>
                             </div>
                         </div>
                     </div>
-
-                    <div>
-                        <Pricing />
-                    </div>
                 </div>
+
+                <div className={gallerystyles.priceComponentWrapper}>
+                    <Pricing />
+                </div>
+            </div>
 
         </div>
     )

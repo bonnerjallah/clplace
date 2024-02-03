@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom"
-import { useState, useEffect } from "react";
 
 import homestyles from '../styles/homestyles.module.css'
 import Footer from "../components/Footer";
@@ -15,21 +14,9 @@ const Home = () => {
         <div className={homestyles.mainContainer} >
             <ScrollToTop />
             <div className={homestyles.heroSectionWrapper}  >
-                <h2  className={homestyles.slidein} >
-                    <span className={homestyles.fastflicker }>C</span>LAD<span className={homestyles.fastflicker }>'</span>
-                    <span>S</span>
-                    
-                </h2>
-                <h2  className={homestyles.place }>
-                    <span>P</span>
-                    <span className={homestyles.fastflicker }>LA</span>
-                    <span>C</span>
-                    <span className={homestyles.flicker}>E</span>
-                </h2>
                 <img src="/Images/house/House1.jpg" alt=""  className={homestyles.houseImage}  />
             </div>
 
-            <hr className={homestyles.linebrk}/>
 
             <main>
                 <div>
@@ -56,7 +43,7 @@ const Home = () => {
                 <div className={homestyles.galleryWrapper}>
                     <div className={homestyles.abiose}>
                         <div className={homestyles.gallerySubHeader}>
-                            <h3>The Ayo</h3>
+                            <h3> Apartment #1: <strong>The Ayo</strong> two bedrooms two baths</h3>
                         </div>
                         <div className={homestyles.abiosePicWrapper}>
                             <NavLink to="/Gallery">
@@ -78,7 +65,7 @@ const Home = () => {
 
                     <div className={homestyles.theOmo}>
                         <div className={homestyles.gallerySubHeader}>
-                            <h3>The Modu</h3>
+                            <h3>Apartment #2: <strong>The Modu</strong> Two bedrooms one bath</h3>
                         </div>
                         <div className={homestyles.abiosePicWrapper}>
                             <NavLink to="/Gallery">

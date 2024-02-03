@@ -59,7 +59,7 @@ const ImageSlider = ({imageUrls}) => {
             </div>
             <div style={{backgroundColor: "rgb(0,0,0,.1)", height:"4rem", display:"flex", justifyContent: "center", alignItems: "center" }}>
                 {imageUrls.map((elem, index) => (
-                    <button onClick={() => setCurrentIndex(index)} className={modalsstyles.sliderButton}>{ <img key={index} src={elem} style={{width:"100%", height:"100%", borderRadius: "50%"}} /> }</button>
+                    <button key={index} onClick={() => setCurrentIndex(index)} className={modalsstyles.sliderButton}>{ <img key={index} src={elem} style={{width:"100%", height:"100%", borderRadius: "50%"}} /> }</button>
                 ))}
             </div>
         </div>

@@ -48,9 +48,9 @@ const TheAbiose = () => {
         
         <div className={gallerystyles.theMianContainer}>
             <div>
-                <h1 className={gallerystyles.header} >
+                <h2 className={gallerystyles.header} >
                     The Ayo
-                </h1>
+                </h2>
             </div>
 
             <div className={gallerystyles.mainContainer}>    
@@ -80,61 +80,53 @@ const TheAbiose = () => {
                         <img src="/Images/house/PHOTO-7.jpg" alt="" />
                     </span>
                 </div>
-                
-                { openHouseModal && (<HouseModal closeHouseModal={setOpenHouseModal} />)}
-                {openBedRoomModal && (<BedRoomModal closeBedRoomModal={setOpenBedRoomModal}/>)}
-                {openKetchenModal && (<KitchenModal closeKitchenModal={setOpenKitchenModal} />)}
-                {openBathRoomModal && (<BathRoomModal closeBathRoomModal={setOpenBathRoomModal} />)}
-                {openLivingRoomModal && <LivingRoomModal closeLivingRoomModal={setOpenLivingRoomModal} />}
-
-                
             </div>
+            
+            {openHouseModal && (<HouseModal closeHouseModal={setOpenHouseModal} />)}
+            {openBedRoomModal && (<BedRoomModal closeBedRoomModal={setOpenBedRoomModal}/>)}
+            {openKetchenModal && (<KitchenModal closeKitchenModal={setOpenKitchenModal} />)}
+            {openBathRoomModal && (<BathRoomModal closeBathRoomModal={setOpenBathRoomModal} />)}
+            {openLivingRoomModal && <LivingRoomModal closeLivingRoomModal={setOpenLivingRoomModal} />}
 
-            <div className={gallerystyles.discriptionContainer}>
-                    <div className={gallerystyles.disWrapper}>
-                        <h2>The Ayo</h2>
-                        <div className={gallerystyles.details}>
-                            <p>2 guests</p>
-                            <p>-2 bedrooms</p>
-                            <p>-2 beds</p>
-                            <p>-2 bath</p>
-                        </div>
-                        <div>
-                            <details style={{color: "#ad9551", cursor:'pointer'}}>
-                                <ul style={{color: "black"}}>
-                                    <li>Master Bedroom: Queen Bed</li>
-                                    <li>Bathroom #1: In the Master Bedroom</li>
-                                    <li>Bedroom #2: Two full size beds </li>
-                                    <li>Bathroom #2:</li>
-                                    <li>Dining Room</li>
-                                    <li>Den</li>
-                                    <li>Full Kitchen</li>
-                                    <li>Randall Street view</li>
-                                </ul>
-                            </details>
-                        </div>
+            <div className={gallerystyles.discriptionContainer} >
+                <div className={gallerystyles.disWrapper}>
+                    <h2>The Ayo</h2>
+                    <div>
+                        <details style={{color: "#ad9551", cursor:'pointer', fontSize: "1.3rem"}}>
+                            <ul style={{color: "black"}}>
+                                <li>Master Bedroom: Queen Bed</li>
+                                <li>Bathroom #1: In the Master Bedroom</li>
+                                <li>Bedroom #2: Two full size beds </li>
+                                <li>Bathroom #2:</li>
+                                <li>Dining Room</li>
+                                <li>Den</li>
+                                <li>Full Kitchen</li>
+                                <li>Randall Street view</li>
+                            </ul>
+                        </details>
+                    </div>
 
-                        <div className={gallerystyles.offerWrapper}>
-                            <p>What this place offers</p>
-                            <div className={gallerystyles.iconWrapper}>
-                                <div>
-                                    <p><span><FontAwesomeIcon icon={faWifi}  /></span> Wifi</p>
-                                    <p><span><FontAwesomeIcon icon={faTv} /></span> Flat Screen</p>
-                                    <p><span><FontAwesomeIcon icon={faKitchenSet} /></span> Cookware/Dishes</p>
-                                    <p><span><FontAwesomeIcon icon={faUtensils} /></span> Utensils</p>
-                                </div>
-                                <div>
-                                    <p><span><FontAwesomeIcon icon={faCouch} /></span> Furnished & Decorated</p>
-                                    <p><span><FontAwesomeIcon icon={faFan} /></span> Air conditioning</p>
-                                </div>
+                    <div className={gallerystyles.offerWrapper}>
+                        <p>What this place offers</p>
+                        <div className={gallerystyles.iconWrapper}>
+                            <div>
+                                <p><span><FontAwesomeIcon icon={faWifi}  /></span> Wifi</p>
+                                <p><span><FontAwesomeIcon icon={faTv} /></span> Flat Screen</p>
+                                <p><span><FontAwesomeIcon icon={faKitchenSet} /></span> Cookware/Dishes</p>
+                                <p><span><FontAwesomeIcon icon={faUtensils} /></span> Utensils</p>
+                            </div>
+                            <div>
+                                <p><span><FontAwesomeIcon icon={faCouch} /></span> Furnished & Decorated</p>
+                                <p><span><FontAwesomeIcon icon={faFan} /></span> Air conditioning</p>
                             </div>
                         </div>
                     </div>
-
-                    <div>
-                        <Pricing />
-                    </div>
                 </div>
+
+                <div className={gallerystyles.priceComponentWrapper}>
+                    <Pricing />
+                </div>
+            </div>
         </div>
     )
 }

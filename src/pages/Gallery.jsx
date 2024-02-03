@@ -35,7 +35,7 @@ const Gallery = () => {
 
             </div>
 
-            <div style={{border: "1px solid black", width: "80%", height:"auto", margin: "auto", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+            <div >
                 {showTheAyo ? <TheAbiose /> : <TheOmo/>}
             </div>
 

@@ -44,7 +44,6 @@ select option {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    border: 2px solid rgb(227, 7, 7);
     padding: 0.5rem; 
 }
 
@@ -84,3 +83,68 @@ select option {
     flex-direction: column;
     row-gap: .3rem;
 }
+
+
+@media(max-width: 1200px) and (min-width: 986px) {
+    .priceWrapper{
+        width: 15rem;
+        background-color: rgb(173, 149, 81, 0.5);
+        padding: 1rem;
+        margin-left: -110px;
+    }
+
+    .datePickersWrapper div input{
+        width:5rem;
+        font-size: .7rem;
+    }
+}
+
+@media(max-width: 985px){
+    .priceWrapper{
+        width: 15rem;
+        background-color: rgb(173, 149, 81, 0.5);
+        padding: 1rem;
+        margin-left: -10rem;
+    }
+
+    .datePickersWrapper div input{
+        width:5rem;
+        font-size: .7rem;
+
+    }
+    
+}
+
+@media(max-width: 930px ) {
+    .priceWrapper{
+        width: 15rem;
+        background-color: rgb(173, 149, 81, 0.5);
+        padding: 1rem;
+        margin-left: -15rem;
+    }
+    
+}
+
+@media(max-width: 830px ) {
+    
+
+    .dateWrapper{
+        width: 80%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: .5rem;
+    }
+
+    .reserveBttnWrapper button{
+        width: 50%;
+        height: 3rem;
+    }
+
+    .pricingAmount div{
+        display: flex;
+        flex-direction: column;
+        row-gap: .3rem;
+    }
+}
+
