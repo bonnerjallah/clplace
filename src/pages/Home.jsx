@@ -25,7 +25,7 @@ const Home = () => {
                     </h2>
                 </div>
                 <p className={[homestyles.welcome, homestyles.paragraphOne].join(' ')}>
-                    Welcome to CLAD’s place! This third-floor modern two-bedroom, two bath apartment is fully furnished and nestled in the center of Monrovia. CLADs is just minutes away from the beach, the American Embassy, grocery stores, fun restaurants, and other attractions.  Fully equipped kitchen (with a full-size Refrigerator, Gas stove, Blender, Microwave, Toaster, and Rice Cooker) to make you feel right at home.
+                    Welcome to CLAD’s place! These two modern third floor apartments (The Ayo and The Modu) are fully furnished and nestled in the center of Monrovia. CLADs is just minutes away from the beach, the American Embassy, grocery stores, fun restaurants, and other attractions.  Fully equipped kitchen (with a full-size Refrigerator, Gas stove, Blender, Microwave, Toaster, and Rice Cooker) to make you feel right at home.
                 </p> 
 
                 <p className={[homestyles.welcome, homestyles.paragraphTwo].join(' ')}>
@@ -96,7 +96,7 @@ const Home = () => {
                 </p>
 
                 <p className={[homestyles.welcome, homestyles.svcParagraphTwo].join(' ')}>
-                If you have questions about availabilities, or would like to make any special requests, trust us to cater to your needs to the best of our ability. We make sure you feel confident and satisfied every step of the way.  
+                If you have questions about availabilities, or would like to make any special requests, trust us to cater to your needs to the best of our ability. We will make sure you feel confident and satisfied every step of the way.  
                 </p>
             </div>
 

@@ -3,6 +3,8 @@ import Footer from "../components/Footer";
 import aboutusstyles from "../styles/aboutusstyles.module.css"
 
 import ScrollToTop from "../components/ScrollToTop";
+import { NavLink } from "react-router-dom";
+
 
 
 const AboutUs = () => {
@@ -26,9 +28,6 @@ const AboutUs = () => {
                         <p className={aboutusstyles.firstLetter}> 
                             Upon C.L. Abiose Davies' demise, he passed the property on to his five surviving children, with the stipulation that the estate remain within the family lineage.  As the family expanded and the potential heirs (including great-grandchildren) increased, C.L. Abiose Davies' heirs collectively decided to designate their successors and transfer ownership while they were alive, preempting any future confusion. 
                         </p>
-                    {/* <div style={{padding: '3rem', margin : "-2rem"}}>
-                        <img src="/Images/family.jpg" alt="" height={300} />
-                    </div> */}
                 </section>
             </div>
 
@@ -38,11 +37,18 @@ const AboutUs = () => {
                 </h1>
                 <section>
                     <p className={aboutusstyles.firstLetter}>
-                        In 2018, one of our cousins was traveling t Monrovia to negotiate an expiring lease with Eagle Electric, and as part of his preparation, he sought an Airbnb for his two-week stay in Monrovia. Upon expressing interest in a specific property, Lush Place managed by Naji, he received a response that initially seemed promising:
-                        <br />
-                        "Hi XXX,
-                        The apartment is on 21st Street Sinkor, surrounded by supermarkets, restaurants, and hotels. Sinkor is a lovely residential area in Monrovia. Are you a Liberian/American?"
+                            In 2018, one of our cousins was traveling to Monrovia to negotiate an expiring lease with Eagle Electric, and as part of his preparation, he sought an Airbnb for his two-week stay in Monrovia. Upon expressing interest in a specific property, Lush Place managed by Naji, he received a response that initially seemed promising:
+                            <br />
+                        <em >
+                            <strong style={{fontSize: "1.1rem"}} >
+                                "Hi XXX,
+                                <br / >
+                                The apartment is on 21st Sinkor, surrounded by supermarkets, restaurants, and hotels. Sinkor is a lovely residential area in Monrovia. Are you a Liberian/American?"
+                            </strong>
+                        </em>
                     </p>
+
+                    <img src="/Images/house/House1.jpg" alt="apartment image" className={aboutusstyles.floteImageRight} />
 
                     <p className={aboutusstyles.firstLetter}>
                         Excited for his trip back home, he affirmed being a Liberian and added that he had been away abroad for over 37 Years. Shockingly, Naji promptly replied, refusing to lease to Liberians and retracted the property's availability.
@@ -50,7 +56,7 @@ const AboutUs = () => {
                     </p>
 
                     <p className={aboutusstyles.firstLetter}>
-                        This discriminatory incident left a lasting negative impact on our cousin's perception of how Liberians were being treated in Liberia by non-Liberians. Consequently, when we had to decide on the next path for the homestead, he strongly advocated for the heirs to undertake a project: renovating the property for short-term rentals to visitors, regardless of rece, religion, nationality, or sexual orientation.
+                        This <NavLink to="/TextDocument">discriminatory</NavLink> incident left a lasting negative impact on our cousin's perception of how Liberians were being treated in Liberia by non-Liberians. Consequently, when we had to decide on the next path for the homestead, he strongly advocated for the heirs to undertake a project: renovating the property for short-term rentals to visitors, regardless of rece, religion, nationality, or sexual orientation.
                     </p>
                 </section>
             </div>
